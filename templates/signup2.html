@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SignUp</title>
+</head>
+<body>
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label>Roll Name</label>
+    <input type="text" id="t1" name="t1"><br>
+    <input type="submit" value="insert-data" id="b1" name="b1">
+</form>
+
+<div>
+    {% if success %}
+    <script type="text/javascript">
+        alert("Successfully Registered")
+    </script>
+    {% endif %}
+</div>
+
+</body>
+</html>

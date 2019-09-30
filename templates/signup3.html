@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label>Full Name</label>
+    <input type="text" id="t1" name="t1"><br>
+    <label>Mobile</label>
+    <input type="text" id="t2" name="t2"><br>
+    <label>password</label>
+    <input type="password" id="p1" name="p1"><br>
+    <label>email</label>
+    <input type="text" id="t3" name="t3"><br>
+    <label>Upload Image</label>
+    <input type="file" id="img1" name="img1"><br>
+
+    <input type="submit" value="insert-data" id="b1" name="b1">
+</form>
+
+<div>
+    {% if success %}
+    <script type="text/javascript">
+        alert("Successfully Registered")
+    </script>
+    {% endif %}
+</div>
+
+{% endblock %}
+

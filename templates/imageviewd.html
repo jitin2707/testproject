@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table border="1" cellspacing="1" cellpadding="10">
+    <tr>
+        <td>FullName</td>
+        <td>Email</td>
+        <td>Password</td>
+        <td>Mobile</td>
+        <td>Image</td>
+    </tr>
+    {% if d %}
+    {% for i in d %}
+    <tr>
+        <td>{{i.userFullName}}</td>
+        <td>{{i.userEmail}}</td>
+        <td>{{i.userPassword}}</td>
+        <td>{{i.userMobile}}</td>
+        <td>{{i.image}}</td>
+        <td><a href="/imgdelete/?id={{i.userEmail}}"> Delete </a> </td>
+        <td><a href="/imagedataup/?id={{i.userEmail}}"> Edit </a> </td>
+    </tr>
+    {% endfor %}
+    {% endif %}
+
+</table>
+
+{% endblock %}

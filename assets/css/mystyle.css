@@ -1,0 +1,17 @@
+body
+{
+background-color : orange;
+}
+
+.div1
+{
+    height:200px;
+    border: 2px solid green;
+}
+
+.div2
+{
+    height:500px;
+    border: 2px solid red;
+}
+
